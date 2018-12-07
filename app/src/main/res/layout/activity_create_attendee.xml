@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attendees_txt"
+        android:text="@string/attendee_name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/attendeeItem"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/enter_an_person_here"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/save_attendee"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/attendeeItem"
+        android:text="@string/save_attendee"
+        android:background="@drawable/buttonshape"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"/>
+    <Button
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/attendeeItem"
+        android:layout_marginLeft="250dp"
+        android:text="@string/delete_attendee"
+        android:id="@+id/deleteAttendee"
+        android:layout_marginStart="250dp"
+        android:background="@drawable/buttonshape"/>
+
+
+
+
+</RelativeLayout>

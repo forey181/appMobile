@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AttendeeActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_create_attendee" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <!--<ListView-->
+            <!--android:id="@android:id/list"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="40dp"/>-->
+
+        <ListView
+            android:id="@+id/listOfAttendees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@android:id/list"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"/>
+
+        <Button
+            android:id="@+id/btnCreateAttendee"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/create"
+            android:layout_toLeftOf="@+id/btnGetAllAttendees"
+            android:layout_toStartOf="@+id/btnGetAllAttendees"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/btnGetAllAttendees"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/refresh"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"
+
+             />
+
+        <!--<Button-->
+            <!--android:id="@+id/btnAddAttendee"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_toRightOf="@+id/btnGetAllAttendees"-->
+            <!--android:text="@string/add"-->
+            <!--android:layout_toEndOf="@+id/btnGetAllAttendees" />-->
+
+        <Button
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/btnGetAllAttendees"
+            android:text="@string/add"
+            android:id="@+id/select_btn"
+            android:layout_toEndOf="@+id/btnGetAllAttendees"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

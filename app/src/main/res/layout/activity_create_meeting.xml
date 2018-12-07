@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateMeeting">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_create_meeting" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/create_meeting_title"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="85dp"
+            android:text="@string/title_of_meeting" />
+
+        <EditText
+            android:id="@+id/title_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:inputType="text"
+            android:layout_below="@+id/page_title"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="Title Of Meeting"/>
+
+        <TextView
+            android:id="@+id/notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/notes_title" />
+
+        <EditText
+            android:id="@+id/edit_notes"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title_edit"
+            android:inputType="text"
+            android:gravity="center"
+            android:hint="Notes For Meeting"/>
+
+        <TextView
+            android:id="@+id/date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notes"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/date_title" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edit_notes"
+            android:gravity="center"
+            android:hint="Click Button For Date"
+            android:id="@+id/edit_date"/>
+
+        <Button
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_date"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="280dp"
+            android:drawableLeft="@drawable/ic_date_edit"
+            android:drawableStart="@drawable/ic_date_edit"
+            android:background="@drawable/buttonshape"/>
+
+        <TextView
+            android:id="@+id/time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/time_title" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_date"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="Click Button For Time"
+            android:id="@+id/edit_time"/>
+        <Button
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_time"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="280dp"
+            android:drawableLeft="@drawable/ic_access_time_white_24dp"
+            android:drawableStart="@drawable/ic_access_time_white_24dp"
+            android:background="@drawable/buttonshape"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/location"
+            android:text="@string/location_title"
+            android:layout_below="@+id/time_title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_lat"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/edit_time"
+            android:hint="@string/latitude_hint"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_long"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/edit_lat"
+            android:hint="@string/longitude_hint"/>
+
+        <Button
+            android:id="@+id/btnSelectLocation"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="275dp"
+            android:layout_marginLeft="280dp"
+            android:drawableLeft="@drawable/ic_edit_location"
+            android:background="@drawable/buttonshape"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/attendees"
+            android:text="@string/attendees_title"
+            android:layout_below="@+id/location"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="75dp"
+            />
+
+        <EditText
+            android:id="@+id/txtItem"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/enter_an_person_here_hint"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/edit_long"
+            />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginLeft="280dp"
+            android:drawableLeft="@drawable/ic_add"
+            android:drawableStart="@drawable/ic_add"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            />
+
+        <!--<ListView-->
+            <!--android:id="@+id/attendeesList"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:layout_below="@id/txtItem"-->
+            <!--/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/notify_title"-->
+                <!--android:text="Notification"-->
+                <!--android:layout_below="@+id/attendeesList"-->
+                <!--android:layout_marginTop="10dp"/>-->
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/notify_btn"-->
+            <!--android:text="@string/notify"-->
+            <!--android:layout_toLeftOf="@+id/save_meeting"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_toStartOf="@+id/save_meeting" />-->
+
+        <!--<Button-->
+            <!--android:layout_width="48dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/notification_settings"-->
+            <!--android:drawableLeft="@drawable/ic_settings_red_a700_24dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:drawableStart="@drawable/ic_settings_red_a700_24dp" />-->
+
+
+        <Button
+            android:id="@+id/save_meeting"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/save_meeting"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/>
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/delete_meeting"
+            android:layout_marginLeft="250dp"
+            android:layout_marginStart="250dp"
+            android:background="@drawable/buttonshape"
+            android:textColor="#ffffff"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
